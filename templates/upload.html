@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload JSON File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Upload JSON File</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="json_file" accept=".json" required>
+        <input type="submit" value="Upload">
+    </form>
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+</body>
+</html>

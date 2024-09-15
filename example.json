@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "customers": [
+    {
+      "customer_id": "CUST001",
+      "journey": [
+        {
+          "step_id": "STEP001",
+          "step_name": "Initial Contact",
+          "timestamp": "2023-09-01T09:00:00Z",
+          "contact_method": "Email",
+          "lead_time": 0,
+          "handoff_to": "STEP002"
+        },
+        {
+          "step_id": "STEP002",
+          "step_name": "Qualification",
+          "timestamp": "2023-09-02T10:30:00Z",
+          "contact_method": "Phone",
+          "lead_time": 1.5,
+          "handoff_to": "STEP003"
+        },
+        {
+          "step_id": "STEP003",
+          "step_name": "Proposal",
+          "timestamp": "2023-09-04T14:15:00Z",
+          "contact_method": "In-Person",
+          "lead_time": 2,
+          "handoff_to": null
+        }
+      ]
+    }
+  ]
+}
+

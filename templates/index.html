@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Journey Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Customer Journey Analysis Tool</h1>
+    <nav>
+        <a href="{{ url_for('upload') }}">Upload JSON File</a>
+    </nav>
+    <h2>Customers</h2>
+    {% if customers %}
+    <ul>
+        {% for customer in customers %}
+            <li><a href="{{ url_for('visualize', customer_id=customer) }}">{{ customer }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No customer data available. Please <a href="{{ url_for('upload') }}">upload</a> a JSON file.</p>
+    {% endif %}
+</body>
+</html>

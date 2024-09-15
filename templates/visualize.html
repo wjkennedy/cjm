@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Journey for {{ customer_id }}</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Customer Journey Visualization for {{ customer_id }}</h1>
+    <div id="graph"></div>
+    <script>
+        var graphJSON = {{ graphJSON|safe }};
+        Plotly.newPlot('graph', graphJSON.data, graphJSON.layout);
+    </script>
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+</body>
+</html>
